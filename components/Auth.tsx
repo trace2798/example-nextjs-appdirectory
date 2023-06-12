@@ -1,9 +1,7 @@
 "use client";
 import { FC, useEffect } from "react";
-// import "@passageidentity/passage-auth";
 
 interface AuthProps {
-  appID?: string;
 }
 
 const Auth: FC<AuthProps> = () => {
