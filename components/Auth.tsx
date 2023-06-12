@@ -1,8 +1,7 @@
 "use client";
 import { FC, useEffect } from "react";
 
-interface AuthProps {
-}
+interface AuthProps {}
 
 const Auth: FC<AuthProps> = () => {
   useEffect(() => {
