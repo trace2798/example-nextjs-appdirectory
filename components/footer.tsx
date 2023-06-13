@@ -1,5 +1,4 @@
 import { FC } from "react";
-// import styles from '../styles/App.module.css';
 
 interface FooterProps {}
 
@@ -7,15 +6,10 @@ const Footer: FC<FooterProps> = ({}) => {
   return (
     <>
       <div className="flex justify-center">
-        Learn more with our{" "}
-        <u>
-          <a href="https://docs.passage.id">Documentation</a>
-        </u>{" "}
-        and{" "}
-        <u>
-          <a href="https://github.com/passageidentity">Github</a>
-        </u>
-        .
+        Learn more with our
+        <a href="https://docs.passage.id" className="underline hover:text-blue-500">&nbsp;Documentation&nbsp;</a>
+        and
+        <a href="https://github.com/passageidentity" className="underline hover:text-blue-500">&nbsp;Github</a>.
       </div>
     </>
   );
