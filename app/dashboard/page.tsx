@@ -9,7 +9,7 @@ interface DashboardProps {
 
 const Dashboard: NextPage<DashboardProps> = async ({ appID }) => {
   const { props } = await getCurrentUser();
-  console.log(props);
+  // console.log(props);
 
   const authorizedBody = (
     <>

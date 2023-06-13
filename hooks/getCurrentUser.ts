@@ -7,17 +7,15 @@ export async function getCurrentUser() {
     apiKey: process.env.PASSAGE_API_KEY!,
     authStrategy: "HEADER",
   });
-  console.log(passage.appID, passage.apiKey)
-  console.log("after passage")
+  // console.log(passage.appID, passage.apiKey)
+  // console.log("after passage")
 
-  // if (!passage.appID || !passage.apiKey) {
-  //   return "invalid key";
-  // }
+ 
   try {
     const cookieStore = cookies();
-    console.log(cookieStore);
+    // console.log(cookieStore);
     const authToken = cookieStore.get('psg_auth_token');
-    console.log('authtoken:', authToken)
+    // console.log('authtoken:', authToken)
     const req = {
       headers: {
         authorization: `Bearer ${authToken?.value}`,
