@@ -1,12 +1,24 @@
-import styles from '../styles/Banner.module.css';
+import Image from "next/image";
+import styles from "../styles/Banner.module.css";
 
 export default function Banner() {
-    return ( 
-        <div className={styles.mainHeader}>
-            <a href="https://passage.id/" ><div className={styles.passageLogo}></div></a>
-            <div className={styles.headerText}>Passage + Next.js Example With /app directory and tailwindcss</div>
-            <div className={styles.spacer}></div>
-            <a href="https://passage.id/" className={styles.link}>Go to Passage</a>
+  return (
+    <>
+      <div className="flex justify-between p-5 items-center bg-slate-700 text-neutral-200">
+        <div className="flex items-center ">
+          <div className="">
+            <a href="https://passage.id/">
+              <Image src="/logo.svg" alt="logo" width={60} height={60} />
+            </a>
+          </div>
+          <div className="text-lg lg:text-3xl">
+            Passage + Next.js Example With /app directory and tailwindcss
+          </div>
         </div>
-    );
+        <div>
+          <a href="https://passage.id/">Go to Passage</a>
+        </div>
+      </div>
+    </>
+  );
 }

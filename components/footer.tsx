@@ -1,12 +1,12 @@
 import { FC } from "react";
-import styles from '../styles/App.module.css';
+// import styles from '../styles/App.module.css';
 
 interface FooterProps {}
 
 const Footer: FC<FooterProps> = ({}) => {
   return (
     <>
-      <div className={styles.footer}>
+      <div className="flex justify-center">
         Learn more with our{" "}
         <u>
           <a href="https://docs.passage.id">Documentation</a>
