@@ -8,6 +8,13 @@ const LogoutButton: FC<LogoutButtonProps> = ({}) => {
   const router = useRouter();
   const handleLogout: MouseEventHandler<HTMLDivElement> = () => {
     localStorage.clear();
+    const cookies = document.cookie.split("; ");
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i];
+      const eqPos = cookie.indexOf("=");
+      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      document.cookie = name + "=;expires=Thu, 01 Jan 2025 00:00:00 GMT;path=/";
+    }
     // Redirect to the login page after logout
     router.push("/");
   };

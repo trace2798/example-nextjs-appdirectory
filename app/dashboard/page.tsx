@@ -7,10 +7,9 @@ interface DashboardProps {
   appID: string;
 }
 
-const Dashboard: NextPage<DashboardProps> = async ({ appID }) => {
+const Dashboard: NextPage<DashboardProps> = async ({ }) => {
   const { props } = await getCurrentUser();
   // console.log(props);
-
   return (
     <main className="flex justify-center p-24 ">
       <div className="border flex justify-center border-black rounded-xl w-96">
