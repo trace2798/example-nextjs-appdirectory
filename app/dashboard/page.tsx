@@ -4,7 +4,7 @@ import { getCurrentUser } from "@/actions/getCurrentUser";
 import LogoutButton from "@/components/LogoutButton";
 
 interface DashboardProps {
-  appID: string;
+
 }
 
 const Dashboard: NextPage<DashboardProps> = async ({ }) => {
