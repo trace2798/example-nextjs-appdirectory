@@ -3,8 +3,8 @@ import { cookies } from "next/headers";
 
 export async function getCurrentUser() {
   const passage = new Passage({
-    appID: process.env.PASSAGE_APP_ID!,
-    apiKey: process.env.PASSAGE_API_KEY!,
+    appID: process.env.NEXT_PUBLIC_PASSAGE_APP_ID!,
+    apiKey: process.env.NEXT_PUBLIC_PASSAGE_API_KEY!,
     authStrategy: "HEADER",
   });
   // console.log(passage.appID, passage.apiKey)

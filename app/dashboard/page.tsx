@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Link from "next/link";
 import { getCurrentUser } from "@/actions/getCurrentUser";
+import LogoutButton from "@/components/LogoutButton";
 
 interface DashboardProps {
   appID: string;
@@ -25,6 +26,8 @@ const Dashboard: NextPage<DashboardProps> = async ({ appID }) => {
                   <br />
                   Your username is: <b>{props.username}</b>
                 </p>
+
+                <LogoutButton />
               </>
             ) : (
               <>
