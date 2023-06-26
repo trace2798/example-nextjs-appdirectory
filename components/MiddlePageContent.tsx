@@ -54,7 +54,7 @@ const MiddlePageContent: FC<MiddlePageContentProps> = ({}) => {
   }
   return (
     <>
-      <div>MiddlePageContent{authTokenInfo}</div>
+      <div className="w-[98vw]">Your Token:&nbsp;<br/>{authTokenInfo}</div>
     </>
   );
 };

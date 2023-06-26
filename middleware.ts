@@ -46,16 +46,16 @@ export async function middleware(request: NextRequest) {
   console.log(authToken, "auth token");
   // const token = await getAuthToken();
 
-  if (!authToken) {
-    console.log("middleware no token");
-    return NextResponse.redirect(new URL("/", request.url));
-  }
+  // if (!authToken) {
+  //   console.log("middleware no token");
+  //   return NextResponse.redirect(new URL("/", request.url));
+  // }
 
   const passage = new Passage({
     appID: process.env.NEXT_PUBLIC_PASSAGE_APP_ID!,
   });
 
-  const userID = await passage.validAuthToken(authToken);
+  const userID = await passage.validAuthToken(authToken as string);
   console.log(userID, "user token sdk middleware");
   if (!userID) {
     console.log("token invalid ");
